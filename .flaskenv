@@ -1,0 +1,1 @@
+FLASK__APP=blog.py
