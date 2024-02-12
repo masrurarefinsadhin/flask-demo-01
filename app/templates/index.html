@@ -1,23 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
+{% extends "nav.html" %}
 
-    </head>
-    <body>
-        {% if  user and user.userName and user.userName != 'default' %}
-        <h1>
-            Hello , {{user.userName}} .
-        </h1>
-        {% else %}
-        <h1>
-            Hello , Anonymous
-        </h1>
-        {% endif %}
-
-        {% for i in posts %}
-        <h3>{{ i }}</h3>
-        {% endfor %}
-    </body>
-
-</html>
+{% block content %}
+    <h1>Hi, {{ current_user.username }}!</h1>
+    <h3>{{ current_user.email }}!</h1>
+{% endblock %}
 
